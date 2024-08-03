@@ -3,11 +3,9 @@ import twitchio
 from twitchio.http import TwitchHTTP
 from Library.twitchchatmaster.twitch_chat import *
 import os 
-import time
 import creds
 import re
 import requests
-import blocklist
 import settings
 import threading
 import random
