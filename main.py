@@ -66,6 +66,8 @@ class Bot(commands.Bot):
         themessage = message.content
         if theusername == creds.BOT_ACCOUNT_TWITCH_CHANNEL:
             return
+        if themessage.startswith('!'):
+            return
         print(f'{message.author.name}: {message.content}')
         if message.echo:
             return
@@ -74,8 +76,6 @@ class Bot(commands.Bot):
             return
         if random.random() < settings.chance:
             self.send_messages_to_chat(wordified)
-        else:
-            return
 
 bot = Bot()
 bot.run()
